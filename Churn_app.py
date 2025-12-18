@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import pickle
+from joblib import load
+
 
 # -------------------------------------------------
 # Page Config
@@ -14,7 +16,8 @@ st.set_page_config(
 # -------------------------------------------------
 # Load Model
 # -------------------------------------------------
-model = pickle.load(open("Churn_model.pkl", "rb"))
+# model = pickle.load(open("Churn_model.pkl", "rb"))
+model = load('churn_model.joblib')
 
 # -------------------------------------------------
 # Header Section
